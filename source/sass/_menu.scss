@@ -1,0 +1,269 @@
+.menu_mobile {
+    text-align: center;
+    margin-top: 10px;
+    .itemMenu {
+        color: $darkblue;
+        font-size: 1.25rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 18px;
+            height: 18px;
+            margin-right: 7px;
+            path {
+                @include anima-slow;
+            }
+        }
+    }
+    .takeSubmenuMobile {
+        display: none;
+        padding: 10px 0;
+        position: relative;
+        z-index: 3002;
+        height: 85vh;
+        overflow-y: auto;
+        .submenuMobile {
+            padding: 10px 0;
+            background: $darkblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            .item {
+                margin-bottom: 15px;
+            }
+            .title {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                .arrowDownSub {
+                    color: #fff;
+                }
+            }
+            a {
+                color: #fff;
+            }
+            .takeChildItemMobile {
+                display: none;
+                @include anima-slow;
+                .childItem {
+                    text-align: left;
+                    font-size: 0.875rem;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            button[aria-expanded="true"] {
+                +.takeChildItemMobile {
+                    @include anima-slow;
+                    display: block;
+                    transition: all 2500ms linear;
+                    will-change: opacity, max-height;
+                }
+            }
+        }
+    }
+}
+
+.menu_desktop {
+    display: none;
+    margin: 20px 0 0px 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            button {
+                font-weight: bold;
+                color: $darkblue;
+                @include anima-slow;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    position: relative;
+                    top: -10px;
+                    path {
+                        @include anima-slow;
+                    }
+                }
+                .itemMenu {
+                    position: relative;
+                    top: -7px;
+                }
+                .arrowDown {
+                    position: relative;
+                    top: 6px;
+                }
+                &:hover {
+                    color: $red;
+                    svg {
+                        path {
+                            fill: $red;
+                        }
+                    }
+                }
+            }
+            a {
+                @include anima-slow;
+                color: $darkblue;
+                font-weight: 550;
+                span {
+                    position: absolute;
+                    margin-top: -6px;
+                }
+                &:hover {
+                    color: $red;
+                    @include anima-slow;
+                    span {
+                        svg {
+                            path,
+                            circle {
+                                @include anima-slow;
+                                fill: $red;
+                            }
+                        }
+                    }
+                }
+            }
+            .takeSubmenu {
+                display: none;
+                padding: 10px 0;
+                margin: 0 auto;
+                position: absolute;
+                z-index: 200;
+                opacity: 0;
+                left: 0;
+            }
+            &:hover {
+                .takeSubmenu {
+                    display: block;
+                    opacity: 1;
+                    @include anima-slow;
+                }
+            }
+            .submenu {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: baseline;
+                background-color: #fff;
+                box-shadow: 0 9px 38px -8px rgba(0, 0, 0, 0.2);
+                border: 1px solid #d9d9d9;
+                border-radius: 5px;
+                overflow: auto;
+                // height: 60vh;
+                padding: 30px 20px;
+                @include anima-slow;
+                .item {
+                    margin-bottom: 12px;
+                    .title {
+                        font-size: 0.875em;
+                        display: flex;
+                        span {
+                            position: relative;
+                            top: 5px;
+                        }
+                    }
+                    &:nth-child(-n + 5) {
+                        &:after {
+                            content: "";
+                            display: block;
+                            background: #d9d9d9;
+                            position: absolute;
+                            top: 20px;
+                            margin-left: percentage(1.7/12);
+                            width: 1px;
+                            height: 80%;
+                        }
+                    }
+                    .arrowDownSub {
+                        cursor: pointer;
+                        @include anima-slow;
+                        &:hover {
+                            @include anima-slow;
+                            color: $red;
+                        }
+                    }
+                    .childItem {
+                        margin-bottom: 5px;
+                        font-size: 0.875rem;
+                        span {
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+            .takeChildItem {
+                display: none;
+                @include anima-slow;
+            }
+            button[aria-expanded="true"] {
+                +.takeChildItem {
+                    @include anima-slow;
+                    display: block;
+                    transition: all 2500ms linear;
+                    will-change: opacity, max-height;
+                }
+            }
+            .submenuanother {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #fff;
+                box-shadow: 0 9px 38px -8px rgba(0, 0, 0, 0.2);
+                border: 1px solid #d9d9d9;
+                border-radius: 5px;
+                padding: 30px 20px;
+                @include anima-slow;
+                .item {
+                    margin-bottom: 20px;
+                }
+            }
+            .takeanothersubmenu {
+                left: auto;
+                width: 150px;
+            }
+        }
+        .launch,
+        .offer,
+        .segmentos,
+        .calendar,
+        .sales {
+            span {
+                display: none;
+                margin-top: -1px;
+                margin-left: -28px;
+            }
+        }
+        .segmentos {
+            .arrowDown {
+                position: absolute;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .menu_desktop {
+        display: block;
+    }
+    .menu_mobile {
+        display: none;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .menu_desktop {
+        display: block;
+        ul {
+            .launch,
+            .offer,
+            .segmentos,
+            .calendar,
+            .sales {
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}

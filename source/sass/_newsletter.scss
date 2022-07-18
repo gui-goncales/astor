@@ -1,0 +1,96 @@
+.newsletter {
+    background: $darkblue;
+    padding: 20px 0;
+    .row {
+        align-items: center;
+    }
+    .takeItens {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .description {
+            color: #fff;
+            padding: 10px;
+            h2 {
+                font-size: 1.45rem;
+                margin-bottom: 10px;
+                font-weight: 550;
+            }
+            .subtitle {
+                margin-bottom: 10px;
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+            a {
+                font-size: 0.875rem;
+                font-weight: 550;
+                color: #fff;
+                text-decoration: underline;
+                @include anima-slow;
+                &:hover {
+                    @include anima-slow;
+                    color: $red;
+                }
+            }
+        }
+    }
+    .formulario {
+        margin-top: 30px;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+        .itemInput {
+            padding: 0 10px;
+            margin-bottom: 10px;
+            input {
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 10px;
+                border: 0;
+                outline: 0;
+            }
+        }
+        .itemCenter {
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .newsletter {
+        form {
+            margin-left: -65px;
+            .itemCenter {
+                text-align: center;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .newsletter {
+        form {
+            .itemCenter {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .newsletter {
+        .formulario {
+            margin-bottom: 0;
+        }
+        form {
+            .itemCenter {
+                margin-top: 0px;
+            }
+        }
+    }
+}

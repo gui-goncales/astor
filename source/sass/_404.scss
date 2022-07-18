@@ -1,0 +1,18 @@
+.page404 {
+    padding: 80px 0;
+    .takePage {
+        text-align: center;
+        svg {
+            width: 200px;
+            height: 200px;
+            path {
+                fill: $red;
+            }
+        }
+        h2 {
+            color: $darkblue;
+            font-size: 1.25rem;
+            margin-top: 20px;
+        }
+    }
+}

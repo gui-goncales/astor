@@ -1,0 +1,37 @@
+.titles_features {
+    font-weight: bold;
+    font-size: 1.55rem;
+    margin: 40px 0 10px 14px;
+    color: $darkblue;
+    @extend .col-9;
+}
+
+.titlePost {
+    height: 70px;
+    margin-top: 20px;
+    h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $darkblue;
+    }
+}
+
+.title_footer {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .titles_features {
+        margin: 40px 0 10px 50px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .title_footer {
+        margin-top: 0;
+    }
+}

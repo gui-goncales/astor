@@ -1,0 +1,108 @@
+.pageLogin {
+    padding: 80px 0;
+    h2 {
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+    .column {
+        background-color: #f2f2f2;
+        margin: 0 auto;
+        padding: 20px;
+        a {
+            font-weight: 550;
+            color: $darkblue;
+            @include anima-slow;
+            &:hover {
+                @include anima-slow;
+                color: $red;
+            }
+        }
+    }
+}
+
+.my_account {
+    padding: 50px 0;
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .woocommerce {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .woocommerce-MyAccount-navigation {
+            @extend .col-12;
+            background-color: #f2f2f2;
+            border: 1px solid #dedede;
+            margin-bottom: 30px;
+            ul {
+                li {
+                    margin-bottom: 5px;
+                    border-bottom: 1px solid #dedede;
+                    padding: 8px 0;
+                    a {
+                        padding: 0 8px;
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+        .woocommerce-MyAccount-content {
+            @extend .col-12;
+        }
+        a {
+            color: $darkblue;
+            margin-bottom: 5px;
+            @include anima-slow;
+            &:hover {
+                color: $red;
+                @include anima-slow;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .my_account {
+        .woocommerce {
+            .woocommerce-MyAccount-navigation {
+                @include make-col(2);
+            }
+            .woocommerce-MyAccount-content {
+                @include make-col(9);
+                margin-left: percentage(1/12);
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .my_account {
+        .woocommerce {
+            .woocommerce-MyAccount-navigation {
+                @include make-col(2);
+            }
+            .woocommerce-MyAccount-content {
+                @include make-col(9.5);
+                margin-left: percentage(0.5/12);
+            }
+        }
+    }
+}
+
+.ywraq_my_account_quotes_title {
+    color: $darkblue;
+}
+
+.ywraq-no-quote-in-list {
+    text-align: center;
+    color: $darkblue;
+}
+
+.woocommerce-MyAccount-navigation-link--downloads,
+.woocommerce-MyAccount-navigation-link--orders,
+.woocommerce-MyAccount-navigation-link--edit-address {
+    display: none;
+}

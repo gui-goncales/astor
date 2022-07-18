@@ -1,0 +1,68 @@
+.bannerHome {
+    margin-top: 15px;
+    .slick-arrow {
+        position: absolute;
+        z-index: 100;
+        top: 14rem;
+        cursor: pointer;
+        svg {
+            width: 40px;
+            height: 40px;
+            path,
+            rect {
+                @include anima-slow;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    @include anima-slow;
+                    fill: #fff;
+                }
+                rect {
+                    @include anima-slow;
+                    fill: $darkblue;
+                }
+            }
+        }
+    }
+    .arrowPrev {
+        left: 0;
+    }
+    .arrowNext {
+        right: 0;
+    }
+    .item {
+        .takeItem {
+            display: none;
+        }
+        .takeItem_mobile {
+            height: 60vh;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .bannerHome {
+        .item {
+            .takeItem {
+                height: 70vh;
+                display: block;
+            }
+            .takeItem_mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+@include responsivo(1920, 4000) {
+    .bannerHome {
+        .item {
+            .takeItem {}
+        }
+        .slick-arrow {
+            top: 16rem;
+        }
+    }
+}

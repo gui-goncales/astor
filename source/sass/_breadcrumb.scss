@@ -1,0 +1,17 @@
+.breadcrumb_my_account {
+    margin: 0px 20px 20px 0;
+    color: $darkblue;
+    a {
+        color: $darkblue;
+        font-weight: 550;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            color: $red;
+        }
+    }
+    .arrow {
+        position: relative;
+        top: 6px;
+    }
+}

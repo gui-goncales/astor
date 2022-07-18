@@ -1,0 +1,1 @@
+<?php echo do_shortcode('[yith_wcan_filters slug="default-preset"]'); ?>

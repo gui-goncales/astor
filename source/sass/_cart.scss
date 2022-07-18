@@ -1,0 +1,63 @@
+.page_carrinho {
+    padding: 100px 10px;
+    h2 {
+        font-weight: bold;
+        font-size: 1.55rem;
+        margin: 40px 0 40px 14px;
+        color: $darkblue;
+        text-align: center;
+    }
+    h3 {
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        text-align: center;
+        color: $darkblue;
+        font-weight: bold;
+    }
+    .ywraq_list_empty_message {
+        text-align: center;
+        font-weight: 550;
+    }
+    .yith-ywraq-mail-form-wrapper {
+        display: none;
+        @include anima-slow;
+        form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .active_formulario_orcamento {
+        display: block;
+        @include anima-slow;
+    }
+    a {
+        color: $darkblue;
+        font-weight: 550;
+        @include anima-slow;
+        &:hover {
+            color: $red;
+            @include anima-slow;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .page_carrinho {
+        .yith-ywraq-mail-form-wrapper {
+            form {
+                .form-row {
+                    width: 50%;
+                }
+                #message_field {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .page_carrinho {
+        padding: 50px 40px;
+    }
+}

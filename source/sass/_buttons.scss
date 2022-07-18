@@ -1,0 +1,372 @@
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.btnOrcamento {
+    text-align: center;
+    a {
+        background: $darkblue;
+        border-radius: 8px;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 0.875em;
+        font-weight: bold;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            background: $red;
+        }
+    }
+}
+
+.btnEnviar {
+    width: 110px !important;
+    margin: 0 auto;
+    padding: 12px 0 !important;
+    text-transform: uppercase;
+    color: $darkblue;
+    font-weight: bold;
+    font-size: 0.875rem;
+    background-color: #919191;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background-color: $red;
+    }
+}
+
+.btn_red {
+    text-align: center;
+    a {
+        background-color: $red;
+        border-radius: 5px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 0.875em;
+        font-weight: bold;
+        padding: 14px 28px;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            background: $darkblue;
+        }
+    }
+}
+
+.leiamais {
+    margin-top: 20px;
+    a {
+        @include anima-slow;
+        color: $darkblue;
+        font-weight: 550;
+        span {
+            position: relative;
+            top: 6px;
+        }
+        &:hover {
+            @include anima-slow;
+            color: $red;
+        }
+    }
+}
+
+.vermais {
+    position: relative;
+    top: 15px;
+    a {
+        @include anima-slow;
+        font-size: 0.875em;
+        font-weight: 550;
+        color: $darkblue;
+        &:hover {
+            @include anima-slow;
+            color: $red;
+        }
+    }
+}
+
+.single_add_to_cart_button {
+    background: $darkblue;
+    border-radius: 8px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: bold;
+    outline: 0;
+    margin-top: 30px;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: $green;
+    }
+}
+
+.yith-wcwl-add-button {
+    margin: 30px 0;
+    a {
+        background: $red;
+        border-radius: 8px;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 0.875em !important;
+        font-weight: bold;
+        outline: 0;
+        margin-top: 30px;
+        @include anima-slow;
+        i {
+            margin-right: 0px !important;
+        }
+        &:hover {
+            @include anima-slow;
+            background: $green;
+        }
+    }
+    .delete_item {
+        background: transparent;
+        color: transparent;
+        font-size: 0.875em !important;
+        margin-bottom: 20px;
+        @include anima-slow;
+        padding: 0;
+        &:after {
+            content: "Remover produto da lista de desejo";
+            display: inline;
+            color: $darkblue;
+            position: absolute;
+            margin-left: -132px;
+        }
+        i {
+            color: $darkblue;
+            position: relative;
+            top: -3px;
+        }
+        &:hover {
+            background: transparent;
+            color: transparent;
+            @include anima-slow;
+            &:after {
+                color: $red;
+            }
+            i {
+                color: $red;
+            }
+        }
+    }
+    .view-wishlist,
+    .separator {
+        display: none;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .yith-wcwl-add-button {
+        a {
+            font-size: 1em !important;
+        }
+    }
+}
+
+.yith-ywraq-add-button {
+    margin: 30px 0;
+    a {
+        background: $darkblue;
+        border-radius: 8px;
+        padding: 10px 25px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: bold;
+        outline: 0;
+        margin-top: 30px;
+        @include anima-slow;
+        i {
+            margin-right: 0px !important;
+        }
+        &:hover {
+            @include anima-slow;
+            background: $green;
+        }
+    }
+}
+
+@include responsivo(0, 374) {
+    .yith-ywraq-add-button {
+        a {
+            font-size: 1.125rem !important;
+        }
+    }
+}
+
+.yith_ywraq_add_item_response_message {
+    color: $darkblue;
+    font-weight: 550;
+    margin-top: 20px;
+}
+
+.yith_ywraq_add_item_browse_message {
+    margin-top: 30px;
+    a {
+        color: $darkblue;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            color: $red;
+        }
+    }
+}
+
+.wc-backward {
+    background: $darkblue !important;
+    border-radius: 8px !important;
+    padding: 10px 25px !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+    outline: 0 !important;
+    margin-top: 30px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: $green !important;
+    }
+}
+
+.return-to-shop {
+    text-align: center;
+}
+
+.woocommerce-button,
+.woocommerce-Button {
+    background-color: $darkblue !important;
+    border-radius: 8px !important;
+    padding: 15px 25px !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+    outline: 0 !important;
+    margin-top: 20px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: $green !important;
+    }
+}
+
+input.button.raq-send-request.last {
+    width: 250px !important;
+    background: $darkblue !important;
+    border-radius: 8px !important;
+    padding: 15px 25px !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+    outline: 0 !important;
+    margin: 0 auto !important;
+    margin-top: 30px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: $green !important;
+    }
+}
+
+.button {
+    background: $darkblue !important;
+    border-radius: 8px !important;
+    padding: 15px 25px !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+    outline: 0 !important;
+    margin-top: 30px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: $green !important;
+    }
+}
+
+.btn_enviar {
+    width: 150px !important;
+    background: $darkblue !important;
+    border-radius: 8px !important;
+    padding: 15px 25px !important;
+    text-transform: uppercase !important;
+    color: #fff !important;
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+    outline: 0 !important;
+    margin-top: 30px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: $green !important;
+    }
+}
+
+.yith-wcwl-wishlistexistsbrowse {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        width: 100%;
+        font-weight: 550;
+        color: $darkblue;
+        margin-top: 10px;
+        @include anima-slow;
+        &:hover {
+            color: $red;
+            @include anima-slow;
+        }
+    }
+}
+
+.btn_finalizar_orcamento_ {
+    text-align: center;
+    button {
+        background: $darkblue !important;
+        border-radius: 8px !important;
+        padding: 15px 25px !important;
+        text-transform: uppercase !important;
+        color: #fff !important;
+        font-size: 0.875rem !important;
+        font-weight: bold !important;
+        outline: 0 !important;
+        margin-top: 30px !important;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            background: $green !important;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .btn_finalizar_orcamento_ {
+        text-align: right;
+    }
+}
+
+a.button.product_type_variable {
+    display: none;
+}
+
+.yith-ywraq-add-to-quote {
+    display: none;
+}
+
+.button_add_to_cart {
+    .yith-ywraq-add-to-quote {
+        display: block;
+    }
+}

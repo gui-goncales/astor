@@ -1,0 +1,110 @@
+.blog {
+    padding-bottom: 60px;
+    .blogHeaderSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            text-align: left;
+        }
+    }
+    .takeposts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 50px;
+    }
+    .takeCategory {
+        margin: 0 auto;
+    }
+    .itemBlog {
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .description_blog {
+        margin-top: 30px;
+        color: $darkblue;
+    }
+    .imgBlog {
+        height: 325px;
+        background-size: cover !important;
+    }
+}
+
+@include responsivo(0, 424) {
+    .blog {
+        .imgBlog {
+            height: 280px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .blog {
+        .imgBlog {
+            height: 320px;
+            background-size: contain !important;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .blog {
+        .itemBlog {
+            margin-bottom: 0;
+        }
+        .imgBlog {
+            height: 280px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .blog {
+        .imgBlog {
+            height: 340px;
+        }
+    }
+}
+
+@include responsivo(1600, 1750) {
+    .blog {
+        .imgBlog {
+            height: 380px;
+        }
+    }
+}
+
+@include responsivo(1751, 4000) {
+    .blog {
+        .imgBlog {
+            height: 420px;
+        }
+    }
+}
+
+.bannerSinglePost {
+    margin-top: 40px;
+    .row {
+        flex-wrap: wrap-reverse;
+        align-items: center;
+    }
+    .title {
+        color: $darkblue;
+        font-weight: 550;
+        margin-bottom: 40px;
+    }
+    .infos_post {
+        font-weight: 550;
+        color: $darkblue;
+    }
+}
+
+.textoSinglePost {
+    padding: 50px 0;
+    color: $darkblue;
+    p {
+        margin-bottom: 20px;
+    }
+}

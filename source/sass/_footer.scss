@@ -1,0 +1,109 @@
+.footer {
+    background: $darkblue;
+    padding: 50px 0 10px 0;
+    .row {
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .logo {
+        margin-bottom: 30px;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .description {
+        color: #fff;
+        font-size: 0.875em;
+    }
+    ul {
+        margin-top: 30px;
+        li {
+            margin-bottom: 10px;
+            a {
+                @include anima-slow;
+                font-size: 0.875em;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                span {
+                    margin-right: 5px;
+                }
+                &:hover {
+                    @include anima-slow;
+                    color: $red;
+                }
+            }
+        }
+        .social_media {
+            display: flex;
+            justify-content: flex-start;
+            a {
+                margin: 0 5px;
+                svg {
+                    margin-right: 5px;
+                    path {
+                        @include anima-slow;
+                    }
+                }
+            }
+        }
+    }
+    .allrights {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+        padding-bottom: 50px;
+        &:before {
+            content: "";
+            display: block;
+            background: rgba(#232c3d, 0.4);
+            width: 100%;
+            height: 1px;
+            margin: 20px 0;
+        }
+        span {
+            font-size: 0.875em;
+            color: #fff;
+            margin-bottom: 10px;
+            a {
+                @include anima-slow;
+                font-weight: 550;
+                color: #fff;
+                &:hover {
+                    @include anima-slow;
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .footer {
+        .logo {
+            img {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .footer {
+        .allrights {
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .footer {
+        .allrights {
+            justify-content: space-between;
+            span {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

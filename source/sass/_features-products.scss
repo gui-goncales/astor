@@ -1,0 +1,152 @@
+.feature_products {
+    .row {
+        align-items: flex-start;
+    }
+    .productsHeaderSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .slider_products {
+        &:after {
+            content: "";
+            display: block;
+            background: #dedede;
+            width: 100%;
+            height: 2px;
+            margin: 30px 0;
+        }
+        .slick-arrow {
+            position: absolute;
+            z-index: 100;
+            top: 13rem;
+            cursor: pointer;
+            svg {
+                width: 40px;
+                height: 40px;
+                path,
+                rect {
+                    @include anima-slow;
+                }
+            }
+            &:hover {
+                svg {
+                    path {
+                        @include anima-slow;
+                        fill: #fff;
+                    }
+                    rect {
+                        @include anima-slow;
+                        fill: $darkblue;
+                    }
+                }
+            }
+        }
+        .arrowPrev {
+            left: 0;
+        }
+        .arrowNext {
+            right: 0;
+        }
+    }
+    .columnProducts {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .itemProduct {
+        padding: 30px 10px;
+        @include anima-slow;
+        .takeProduct {
+            background: #fff;
+            padding: 30px 0;
+            @include anima-slow;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: $darkblue;
+            margin: 20px 20px;
+            text-align: center;
+        }
+        .takeImageProduto {
+            opacity: 1;
+            @include anima-slow;
+        }
+        .takeImageProdutoHover {
+            display: none;
+            opacity: 0;
+            @include anima-slow;
+        }
+        .ref {
+            color: $dark;
+            text-align: center;
+            font-weight: 550;
+            text-transform: uppercase;
+            &:before {
+                content: "Ref: ";
+                display: inline;
+                text-transform: uppercase;
+                color: $darkblue;
+            }
+        }
+        .category {
+            @include anima-slow;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            margin: 20px 0;
+            text-align: center;
+            a {
+                font-weight: 550;
+                color: $darkblue;
+                @include anima-slow;
+                &:hover {
+                    @include anima-slow;
+                    color: $red;
+                }
+            }
+        }
+        .sobconsulta {
+            @include anima-slow;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: $darkblue;
+            margin: 50px 0 30px 0;
+            text-align: center;
+        }
+        .btnOrcamento {
+            opacity: 0;
+            @include anima-slow;
+        }
+        &:hover {
+            @include anima-slow;
+            .takeProduct {
+                @include anima-slow;
+                box-shadow: 0px -2px 12px 4px rgba(0, 0, 0, 0.15);
+            }
+            .btnOrcamento {
+                @include anima-slow;
+                opacity: 1;
+            }
+            .takeImageProduto {
+                opacity: 0;
+                display: none;
+                @include anima-slow;
+            }
+            .takeImageProdutoHover {
+                display: block;
+                opacity: 1;
+                @include anima-slow;
+            }
+        }
+    }
+}
+
+.whitout_after {
+    .slider_products {
+        &:after {
+            display: none;
+        }
+    }
+}
